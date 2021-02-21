@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Factory_Method
+﻿namespace Factory_Method
 {
-    class IMessage
+    public interface IMessage
     {
+        string Text { get; }
+        string Target { get; }
+        string Source { get; }
+        void Send();
     }
 }

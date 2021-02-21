@@ -1,10 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Factory_Method
 {
-    class TelegramMessage
+    public class TelegramMessage : MessageBase
     {
+        public TelegramMessage(string text, string source, string target) : base(text, source, target) { }
+        public override void Send()
+        {
+            Console.WriteLine($"Telegram: Текст от @{Source} для @{Target}: {Text}");
+        }
     }
 }

@@ -1,10 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Factory_Method
+﻿namespace Factory_Method
 {
-    class IMessanger
+    public interface IMessanger
     {
+        string UserName { get; }
+        string Password { get; }
+        bool Connected { get; }
+        IMessage CreateMessage(string text, string source, string target);
+        bool Authorize();
     }
 }
